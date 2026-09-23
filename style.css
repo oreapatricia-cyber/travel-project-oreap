@@ -1,0 +1,169 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+  filter: brightness(45%);
+}
+
+/* Dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-text h1,
+.hero-text h2 {
+  color: #f8f8f8;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text h1 {
+  font-size: 60px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* INTRO */
+.intro-section {
+  padding: 60px 20px;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.intro-photo {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* FAVORITES */
+.favorites-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* GALLERY */
+.gallery-section {
+  padding: 60px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .intro-grid,
+  .favorites-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 50vh;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+}
