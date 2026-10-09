@@ -199,19 +199,58 @@ p {
   margin: 15px auto;
 }
 
-/* FOOTER */
-footer {
+/* NEW LISBON-STYLE FOOTER */
+.footer-section {
   background: #000;
   color: #fff;
-  padding: 30px 20px;
-  text-align: center;
+  padding: 50px 20px;
+  margin-top: 40px;
 }
 
-footer a {
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
   color: #fff;
   text-decoration: underline;
-  margin: 0 10px;
-  font-size: 14px;
+  font-size: 15px;
+}
+
+.footer-section p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive footer */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 15px;
+  }
 }
 
 /* RESPONSIVE */
